@@ -1,0 +1,6 @@
+<a name="the-following-notice-governs-the-c-spec"></a><span data-ttu-id="45444-101">다음 표시를 제어 C# 사양</span><span class="sxs-lookup"><span data-stu-id="45444-101">THE FOLLOWING NOTICE GOVERNS THE C# SPEC</span></span>
+=====
+
+<span data-ttu-id="45444-102">1999-2017 Microsoft Corporation 저작권 정보 (c)입니다.</span><span class="sxs-lookup"><span data-stu-id="45444-102">(c) Copyright 1999-2017 Microsoft Corporation.</span></span> <span data-ttu-id="45444-103">All rights reserved.</span><span class="sxs-lookup"><span data-stu-id="45444-103">All rights reserved.</span></span>
+<span data-ttu-id="45444-104">Microsoft, Windows, Visual Basic, Visual C# 및 Visual c + +는 등록된 상표 또는 대한민국 및/또는 기타 국가/지역에서 Microsoft Corporation의 상표입니다.</span><span class="sxs-lookup"><span data-stu-id="45444-104">Microsoft, Windows, Visual Basic, Visual C#, and Visual C++ are either registered trademarks or trademarks of Microsoft Corporation in the U.S.A. and/or other countries/regions.</span></span>
+<span data-ttu-id="45444-105">여기에 언급 된 다른 제품 및 회사 이름에는 해당 소유자의 상표일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="45444-105">Other product and company names mentioned herein may be the trademarks of their respective owners.</span></span>
