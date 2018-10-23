@@ -125,12 +125,12 @@ C# 프로그램이 상호 작용할 수 있도록 동적 바인딩 목적은 ***
 | [관계형 및 형식 테스트 연산자](expressions.md#relational-and-type-testing-operators) | 같음                    | `==`  `!=`    | 
 | [논리 연산자](expressions.md#logical-operators)                                         | 논리적 AND                 | `&`           | 
 | [논리 연산자](expressions.md#logical-operators)                                         | 논리 XOR                 | `^`           | 
-| [논리 연산자](expressions.md#logical-operators)                                         | 논리적 OR                  | `|`           |
+| [논리 연산자](expressions.md#logical-operators)                                         | 논리적 OR                  | <code>&#124;</code>           |
 | [조건부 논리 연산자](expressions.md#conditional-logical-operators)                 | 조건부 AND             | `&&`          | 
-| [조건부 논리 연산자](expressions.md#conditional-logical-operators)                 | 조건부 OR              | `||`          | 
+| [조건부 논리 연산자](expressions.md#conditional-logical-operators)                 | 조건부 OR              | <code>&#124;&#124;</code>          | 
 | [Null 결합 연산자](expressions.md#the-null-coalescing-operator)                   | Null 결합             | `??`          | 
 | [조건 연산자](expressions.md#conditional-operator)                                   | 조건                 | `?:`          | 
-| [대입 연산자](expressions.md#assignment-operators), [익명 함수 식](expressions.md#anonymous-function-expressions)  | 할당 및 람다 식 | `=`  `*=`  `/=`  `%=`  `+=`  `-=`  `<<=`  `>>=`  `&=`  `^=`  `|=`  `=>` | 
+| [대입 연산자](expressions.md#assignment-operators), [익명 함수 식](expressions.md#anonymous-function-expressions)  | 할당 및 람다 식 | `=`  `*=`  `/=`  `%=`  `+=`  `-=`  `<<=`  `>>=`  `&=`  `^=`  <code>&#124;=</code>  `=>` | 
 
 피연산자 간에 두 연산자의 우선 순위가 같은 경우 연산자의 결합성 순서를 제어 합니다 작업이 수행 됩니다.
 
@@ -3503,7 +3503,7 @@ bool? operator |(bool? x, bool? y);
 
 다음 표에서 값의 모든 조합에 대 한 이러한 연산자에서 생성 되는 결과 `true`, `false`, 및 `null`합니다.
 
-| `x`     | `y`     | `x & y` | ' x | y' |
+| `x`     | `y`     | `x & y` | <code>x &#124; y</code> |
 |:-------:|:-------:|:-------:|:-------:|
 | `true`  | `true`  | `true`  | `true`  | 
 | `true`  | `false` | `false` | `true`  | 
