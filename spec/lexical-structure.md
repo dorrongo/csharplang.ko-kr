@@ -2,37 +2,37 @@
 
 ## <a name="programs"></a>Programs
 
-C# ***프로그램*** 하나 이상의 구성 ***파일만***공식적으로 알려진 ***컴파일 단위*** ([컴파일 단위](namespaces.md#compilation-units)). 소스 파일은 유니코드 문자 시퀀스를 정렬된 합니다. 소스 파일 일반적으로 파일을 사용 하 여 일대일로 대응 파일 시스템에 있지만이 대응 필요 하지 않습니다. 최대 이식성을 얻으려면 파일 시스템에서 파일을 u t F-8로 인코딩할 수는 것이 좋습니다 인코딩.
+C# ***프로그램*** 은 공식적으로 ***컴파일 단위*** ([컴파일 단위](namespaces.md#compilation-units))로 알려진 하나 이상의 ***소스 파일*** 로 구성됩니다. 소스 파일이란 정렬된 유니코드 문자 시퀀스를 말합니다. 소스 파일은 일반적으로 파일 시스템의 파일과 일대일 대응하지만 서신은 필요하지 않습니다. 최대한의 이식성을 위해 파일 시스템의 파일을 u t F-8로 인코딩하는 것이 좋습니다.
 
-개념적인 측면에서 말하자면 컴파일되면 해당 프로그램은 세 가지 단계를 사용 하 여:
+개념적으로 말해서 프로그램은 다음 세 단계를 사용하여 컴파일됩니다:
 
-1. 변환 파일을 인코딩 체계를 특정 문자 레퍼토리가 상당히에서 유니코드 문자 시퀀스로 변환 합니다.
-2. 토큰 스트림의 입력된 유니코드 문자 스트림을 변환 하는 어휘 분석 합니다.
-3. 토큰 스트림을 실행 코드로 변환 하는 구문 분석 합니다.
+1. 특정 문자 레퍼토리 및 인코딩 체계의 파일을 유니코드 문자 시퀀스로 변환하는, (Transformation)변환을 합니다.
+2. 유니 코드 입력 문자 스트림을 토큰 스트림으로 변환하는, (Lexical analysis)어휘 분석을 합니다.
+3. 토큰 스트림을 실행 가능한 코드로 변환하는, (Syntactic analysis)구문 분석을 합니다.
 
 ## <a name="grammars"></a>문법
 
-이 사양은 두 문법을 사용 하 여 C# 프로그래밍 언어의 구문을 제공 합니다. 합니다 ***어휘 문법*** ([어휘 문법](lexical-structure.md#lexical-grammar)) 유니코드 문자 형식 줄 종결자, 공백, 설명, 토큰 및 전처리 지시문을 결합 하는 방법을 정의 합니다. 합니다 ***구문 문법*** ([구문 문법](lexical-structure.md#syntactic-grammar)) 프로그램을 만들기 위해 C# 어휘 문법의 결과 토큰을 결합 하는 방법을 정의 합니다.
+이 사양은 두 문법을 사용하여 C# 프로그래밍 언어의 구문을 제공 합니다. 합니다 (Lexical grammar) ***어휘 문법*** ([어휘 문법](lexical-structure.md#lexical-grammar)) 은 유니코드 문자가 어떻게 조합되어 (line terminators)줄 종결자, 공백, 설명, 토큰 및 전처리 지시문을 형성하는지 그 방법을 정의합니다. (Syntactic grammar) ***구문 문법*** ([구문 문법](lexical-structure.md#syntactic-grammar)) 은 어떻게 어휘 문법에서 생성 된 토큰이 결합되어 C # 프로그램을 구성하는지 그 방법을 정의합니다.
 
 ### <a name="grammar-notation"></a>문법 표기법
 
-어휘 및 구문 문법 ANTLR 문법 도구의 표기법을 사용 하 여 Backus Naur 폼에 표시 됩니다.
+어휘 및 구문 문법은 ANTLR 문법 도구의 표기법을 사용하여 Backus Naur 형식으로 제공됩니다.
 
 ### <a name="lexical-grammar"></a>어휘 문법
 
-C#의 어휘 문법에서 제공 됩니다 [어휘 분석](lexical-structure.md#lexical-analysis)를 [토큰](lexical-structure.md#tokens), 및 [전처리 지시문](lexical-structure.md#pre-processing-directives)합니다. 어휘 문법의 터미널 기호는 유니코드 문자 집합의 문자 및 어휘 문법 문자 형식 토큰에 결합 하는 방법을 지정 합니다 ([토큰](lexical-structure.md#tokens)), 공백 ([공백을](lexical-structure.md#white-space)), 주석 ([주석](lexical-structure.md#comments)), 전처리 지시문 및 ([전처리 지시문](lexical-structure.md#pre-processing-directives)).
+C#의 어휘 문법은 [어휘 분석](lexical-structure.md#lexical-analysis)과 [토큰](lexical-structure.md#tokens), 및 [전처리 지시문](lexical-structure.md#pre-processing-directives)에 표시됩니다. 어휘 문법의 터미널 기호는 유니코드 문자 집합의 문자이며, 어휘 문법은 문자가 결합되어 토큰 ([토큰](lexical-structure.md#tokens))과 공백 ([공백을](lexical-structure.md#white-space)), 주석 ([주석](lexical-structure.md#comments)) 및 전처리 지시문 ([전처리 지시문](lexical-structure.md#pre-processing-directives))을 형성하는 방법을 지정합니다.
 
-C# 프로그램의 모든 소스 파일을 따라야 합니다 *입력* 어휘 문법의 프로덕션 ([어휘 분석](lexical-structure.md#lexical-analysis)).
+C# 프로그램의 모든 소스 파일은 어휘 문법 ([어휘 분석](lexical-structure.md#lexical-analysis))의 *입력* 생성을 따라야 합니다.
 
 ### <a name="syntactic-grammar"></a>구문 문법
 
-C#의 구문 문법 장과이 챕터를 참조 하는 부록에 표시 됩니다. 구문 문법의 터미널 기호는 어휘 문법에서 정의한 토큰 및 구문 문법 토큰 C# 프로그램을 만들기 위해 결합 하는 방법을 지정 합니다.
+C#의 구문 문법은 각 챕터들과 그 부록에 표시됩니다. 구문 문법의 터미널 기호는 어휘 문법에서 정의된 토큰이고, 구문 문법은 토큰이 결합되어 C# 프로그램을 형성하는 방법을 지정합니다.
 
-C# 프로그램의 모든 소스 파일을 따라야 합니다 *compilation_unit* 구문 문법의 프로덕션 ([컴파일 단위](namespaces.md#compilation-units)).
+C# 프로그램의 모든 소스 파일은 구문 문법의 프로덕션 *compilation_unit*([컴파일 단위](namespaces.md#compilation-units))을 따라야 합니다.
 
 ## <a name="lexical-analysis"></a>어휘 분석
 
-합니다 *입력* 프로덕션 C# 소스 파일의 어휘 구조를 정의 합니다. C# 프로그램의 각 소스 파일은이 어휘 문법 프로덕션에 맞아야 합니다.
+*입력* 프로덕션은 C# 소스 파일의 어휘 구조를 정의 합니다. C# 프로그램의 각 소스 파일은 이 어휘 문법 프로덕션에 맞아야 합니다.
 
 ```antlr
 input
